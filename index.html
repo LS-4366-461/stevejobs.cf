@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/toastr.min.css" rel="stylesheet">
+		<link href="/css/global.css" rel="stylesheet">
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/toastr.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/jquery-ui.min.js"></script>
+		<script src="/js/konami.min.js"></script>
+		<title>Steve Jobs</title>
+	</head>
+	<style>
+body {
+	font-family: 'DIN Condensed';
+}
+.row {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+.navbar-dark.bg-dark {
+	background-color: black !important;
+}
+	</style>
+	<script>
+$(function() {
+        $('[data-anchor]').click(function(){
+  		var id = $(this).attr('data-anchor');
+  		$(id).scrollTo();
+	});
+});
+function mit() {
+  color = ['red', 'green', 'blue'];
+  counter = 0;
+  setInterval(function(){
+	$('.row').css('background-color', color[counter]);
+	counter++;
+	if (counter == 3) {
+	counter = 0;
+}
+  }, 1000);
+}
+$(document).on('keyup',
+        Konami.code(function() {
+            setTimeout(function(){
+               mit();
+         }, 250); 
+    })
+);
+	</script>
+	<body style="overflo-x: hidden;padding-top:56px">
+		<div class="fluid-container">
+			<div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="#">Steve Jobs</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-atrget="#navcollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#" data-jump="#apple">Apple</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" data-jump="#pixar">Pixar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" onClick="next()">NeXT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" onClick="movie()">Movies</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row" style="background-color: #111;height: 94VH">
+				<div class="col d-flex flex-column" style="justify-content: space-around; align-items: center; text-align: center;">
+					<center><h1 style="color:white;text-align:center;font-size:900%">Steve Jobs</h1><p style="color:white;font-size: 150%">From an orphan and college dropout, to a successful billionaire.<br> The making of the Apple<sup style="font-size:60%">&reg;</sup>  and Pixar<sup style="font-size:60%">&reg;</sup>, and the forced resignation of Apple's most profitable CEO.</p></center>
+				</div>
+			</div>
+			<a id="apple"></a>
+			<div class="row" style="background-color: #fff;height: 100VH">
+				<div class="col d-flex flex-column" style="justify-content: space-around; align-items: center; text-align: center;">
+					<h1 style="font-size: 600%"></h1>
+				</div>
+			</div>
+			<a id="pixar"></a>
+			<div class="row" style="background-color: #555;height: 100VH">
+				<div class="col d-flex flex-column" style="justify-content: space-around; align-items: center; text-align: center;">
+					<h1 style="font-size: 600%"></h1>
+				</div>
+			</div>
+			<a id="next"></a>
+			<div class="row" style="background-color: #fff;height: 100VH">
+				<div class="col d-flex flex-column" style="justify-content: space-around; align-items: center; text-align: center;">
+					<h1 style="font-size: 600%"></h1>
+				</div>
+			</div>
+			<a id="movies"></a>
+			<div class="row" style="background-color: #555;height: 100VH">
+				<div class="col d-flex flex-column" style="justify-content: space-around; align-items: center; text-align: center;">
+					<h1 style="font-size: 600%"></h1>
+				</div>
+			</div>
+			<div class="row" style="background-color: #000;height: 5VH;margin-bottom:0">
+				<a href="#" onClick="top()" style="text-decoration: none; color: white;padding-top:10px;padding-bottom:10px;margin-left:45VH"><h4> ^ Back To Top</h4></a>
+				<a href="#" onClick="mit()" style="text-decoration: none; color: white;"><h4 style="color:white;margin-right:45VH;padding-top:10px;padding-bottom:10px;margin-left:55VH">Luke Silver</h4>
+			</div>
+		</div>
+	</body>
+</html>
